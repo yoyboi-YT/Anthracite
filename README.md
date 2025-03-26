@@ -5,3 +5,4 @@ A simple, customisable JSON server.
 Copy main.py and ldb.json into any folder.
 Run main.py. It will generate a cfg.json and key.
 Configure the port and permissions, and copy the key into your app.
+Run server.py again, and it will serve ldb.json.
