@@ -62,7 +62,10 @@ class RequestHandler(http.server.SimpleHTTPRequestHandler):
             except FileNotFoundError:
                 self.send_response(404)
                 self.end_headers()
-                log("GET 404 (fs)")
+                log("GET 404")
+                with open('ldb.json', 'w') as f:
+                    json.dump({}, f, indent=4)
+                log("LDB missing, created new one")
         else:
             self.send_response(404)
             self.end_headers()
