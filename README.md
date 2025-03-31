@@ -1,5 +1,6 @@
 # Anthracite
 A simple, customisable JSON server.
+(Don't expect security)
 
 ## Getting Started
 Copy main.py into any folder.
