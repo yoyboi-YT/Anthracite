@@ -24,6 +24,14 @@ except FileNotFoundError:
     log("Default config has been loaded")
     cfg = default_cfg
 
+try:
+    with open('ldb.json', 'r') as f:
+        pass
+except:
+    with open('ldb.json', 'w') as f:
+        json.dump({}, f, indent=4)
+    log("LDB missing, created new one")
+
 if len(cfg.get("key", "")) < 64:
     log("The provided key is too short")
     chs = string.ascii_letters + string.digits + string.punctuation
