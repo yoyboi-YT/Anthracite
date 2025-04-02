@@ -32,7 +32,7 @@ except:
         json.dump({}, f, indent=4)
     log("LDB missing, created new one")
 
-if len(cfg.get("key", "")) < 64:
+if len(cfg.get("key")) < 64:
     log("The provided key is too short")
     chs = string.ascii_letters + string.digits + string.punctuation
     chs = chs.replace('"', '').replace('\\', '')  # Avoid JSON issues
